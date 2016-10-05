@@ -25,16 +25,14 @@ class PatientsController < ApplicationController
   # POST /patients.json
   def create
     @patient = Patient.new(patient_params)
+    @patient.admin = false
 
-    respond_to do |format|
-      if @patient.save
-        format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
-        format.json { render :show, status: :created, location: @patient }
-      else
-        format.html { render :new }
-        format.json { render json: @patient.errors, status: :unprocessable_entity }
-      end
+    if @patient.save
+      redirect_to @patient, notice: 'Patient was successfully created.'
+    else
+      render :new
     end
+
   end
 
   # PATCH/PUT /patients/1
@@ -69,6 +67,6 @@ class PatientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def patient_params
-      params.require(:patient).permit(:email, :password_digest, :name, :admin)
+      params.require(:patient).permit(:email, :password, :name, :admin)
     end
 end

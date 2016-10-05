@@ -13,22 +13,22 @@
 
   <div class="field">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, placeholder: "Enter your email"  %>
   </div>
 
   <div class="field">
     <%= f.label :password %>
-    <%= f.text_field :password %>
+    <%= f.password_field :password, placeholder: "Enter your password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password_confirmation, placeholder: "Enter your password" %>
   </div>
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :admin %>
-    <%= f.check_box :admin %>
+    <%= f.text_field :name, placeholder: "Enter your name"  %>
   </div>
 
   <div class="actions">
