@@ -5,6 +5,7 @@ class PatientsController < ApplicationController
   # GET /patients.json
   def index
     @patients = Patient.all
+    puts "Current patient #{@current_patient}"
   end
 
   # GET /patients/1

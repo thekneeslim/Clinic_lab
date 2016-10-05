@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  puts "Current patient #{@current_patient}"
+
+  before_action :current_patient
 
   def is_authenticated
     unless current_patient
