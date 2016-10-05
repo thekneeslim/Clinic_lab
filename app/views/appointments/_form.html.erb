@@ -1,0 +1,39 @@
+<%= form_for(appointment) do |f| %>
+  <% if appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- need to auto populate -->
+  <div class="field">
+    <%= f.label :patient_id %>
+    <%= f.number_field :patient_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :doctor %>
+    <%= f.select :doctor_ids, Doctor.all.collect {|x| [x.name, x.id]}%>
+  </div>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.select :date_ids, Date.all.collect {|x| [x.name, x.id]}%>
+  </div>
+
+  <div class="field">
+    <%= f.label :time %>
+    <%= f.select :time_ids, Date.all.collect {|x| [x.name, x.id]}%>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
