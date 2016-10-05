@@ -1,1 +1,15 @@
 <h1>MAIN#INDEX</h1>
+
+<div>
+  <p>
+    we have <%= pluralize(Doctor.count, 'doctor') %>
+  </p>
+  <p>
+    and these are our hospital's specialisations
+  </p>
+  <ul>
+    <% Specialty.all.each do |specialty| %>
+      <li> <%= specialty.specialty %> </li>
+    <% end %>
+  </ul>
+</div>
