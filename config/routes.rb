@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :time_tables
+  resources :specialties
   root 'main#index'
 
   get "login" => "sessions#new"
