@@ -14,7 +14,7 @@
   <!-- need to auto populate -->
   <div class="field">
     <%= f.label :patient_id %>
-    <%= f.number_field :patient_id %>
+    <%= f.select :patient_id, Patient.all.collect {|x| [x.name, x.id]}%>
   </div>
 
   <div class="field">

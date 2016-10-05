@@ -1,7 +1,7 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
   before_action :is_authenticated, except: [:index, :show]
-  
+
   # GET /appointments
   # GET /appointments.json
   def index
@@ -71,6 +71,6 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
-      params.require(:appointment).permit(:patient_id, :doctor_id, :date_id, :time_id)
+      params.require(:appointment).permit(:patient_id, :doctor_id, :appointment_date_id, :time_table_id)
     end
 end
