@@ -8,5 +8,10 @@ Rails.application.routes.draw do
 
   resources :doctors
   resources :patients
+<<<<<<< HEAD
+=======
+  resources :appointment_dates
+  resources :appointments
+>>>>>>> c00cc72
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

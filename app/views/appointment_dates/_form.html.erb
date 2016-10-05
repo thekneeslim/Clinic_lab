@@ -1,0 +1,22 @@
+<%= form_for(appointment_date) do |f| %>
+  <% if appointment_date.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appointment_date.errors.count, "error") %> prohibited this appointment_date from being saved:</h2>
+
+      <ul>
+      <% appointment_date.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
