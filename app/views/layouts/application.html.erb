@@ -15,11 +15,21 @@
       <%= link_to 'LOGOUT', logout_url, method: :delete, data: {confirm: 'Are you sure?'}%>
       <% else %>
       <a class="nav-link" href="/login">Login</a>
-      <a class="nav-link" href="/users">Sign Up</a>
+      <a class="nav-link" href="/patients/new">Sign Up</a>
     <%end%>
 
-    <%= render "partials/flash" %>
+    <%if @current_patient %>
+      <% if @current_patient.admin == true %>
+      <a class="nav-link" href="/doctors">Doctors</a>
+      <% end %>
+    <% end %>
 
+    <%= render "partials/flash" %>
+    <% if @current_patient %>
+      <p>
+        WELCOME <%= @current_patient.name %>
+      </p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
