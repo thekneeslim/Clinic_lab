@@ -1,5 +1,6 @@
 class AppointmentDatesController < ApplicationController
   before_action :set_appointment_date, only: [:show, :edit, :update, :destroy]
+  before_action :is_admin, except: [:index, :show]
 
   # GET /appointment_dates
   # GET /appointment_dates.json

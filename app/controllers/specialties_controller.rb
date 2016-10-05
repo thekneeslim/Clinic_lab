@@ -1,6 +1,6 @@
 class SpecialtiesController < ApplicationController
   before_action :set_specialty, only: [:show, :edit, :update, :destroy]
-
+  before_action :is_admin, except: [:index, :show]
   # GET /specialties
   # GET /specialties.json
   def index
