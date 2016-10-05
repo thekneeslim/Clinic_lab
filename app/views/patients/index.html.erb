@@ -19,7 +19,15 @@
         <td><%= patient.email %></td>
         <td><%= patient.password_digest %></td>
         <td><%= patient.name %></td>
-        <td><%= patient.admin %></td>
+
+        <td>
+          <%if @current_patient%>
+            <% if @current_patient.admin %>
+            <%= patient.admin %>
+            <% end %>
+          <% end %>
+        </td>
+
         <td><%= link_to 'Show', patient %></td>
         <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
         <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,6 +35,8 @@
     <% end %>
   </tbody>
 </table>
+
+
 
 <br>
 
