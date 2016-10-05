@@ -1,7 +1,7 @@
 class DoctorsController < ApplicationController
   before_action :set_doctor, only: [:show, :edit, :update, :destroy]
   before_action :is_admin, except: [:index, :show]
-  
+
   # GET /doctors
   # GET /doctors.json
   def index
@@ -70,6 +70,6 @@ class DoctorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def doctor_params
-      params.require(:doctor).permit(:name)
+      params.require(:doctor).permit(:name, :specialty)
     end
 end
