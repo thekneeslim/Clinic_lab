@@ -29,7 +29,7 @@
 
   <div class="field">
     <%= f.label :time %>
-    <%= f.select :time_ids, Date.all.collect {|x| [x.name, x.id]}%>
+    <%= f.select :time_ids, Time.all.collect {|x| [x.name, x.id]}%>
   </div>
 
 
