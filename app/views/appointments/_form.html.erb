@@ -19,17 +19,17 @@
 
   <div class="field">
     <%= f.label :doctor %>
-    <%= f.select :doctor_ids, Doctor.all.collect {|x| [x.name, x.id]}%>
+    <%= f.select :doctor_id, Doctor.all.collect {|x| [x.name, x.id]}%>
   </div>
 
   <div class="field">
     <%= f.label :date %>
-    <%= f.select :date_ids, Date.all.collect {|x| [x.name, x.id]}%>
+    <%= f.select :appointment_date_id, AppointmentDate.all.collect {|x| [x.date, x.id]}%>
   </div>
 
   <div class="field">
     <%= f.label :time %>
-    <%= f.select :time_ids, Time.all.collect {|x| [x.name, x.id]}%>
+    <%= f.select :time_table_id, TimeTable.all.collect {|x| [x.time_table, x.id]}%>
   </div>
 
 
