@@ -16,8 +16,7 @@
   <% if @current_patient%>
     <% if @current_patient.admin == false%>
     <div class="field">
-      <%= f.label :patient_id %>
-      <%= f.text_field :patient_id, :value => @current_patient.id %>
+      <%= f.hidden_field :patient_id, :value => @current_patient.id %>
     </div>
     <%else%>
     <div class="field">
