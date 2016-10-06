@@ -22,18 +22,19 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
               <!-- SPECIALTY LIST -->
 
-              <form class="" action="index.html" method="post">
+              <form id="form1" class="mainpageSearch" action="/" method="post">
                 <div class="form-group">
-                  <label for="exampleSelect1">Example select</label>
+                  <label for="exampleSelect1">Select Specialty</label>
                   <select class="form-control" id="exampleSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                    <option disable>--SELECT--</option>
+                    <% @specialties.each do |specialty| %>
+                      <option><%=specialty.specialty%></option>
+                      <%end%>
                   </select>
                 </div>
+                <button type="submit" class="btn btn-warning">Submit</button>
               </form>
+
             </div>
           </div>
           <!-- SEARCH BY DOCTOR-->
@@ -46,7 +47,21 @@
               </h4>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-              DOCTOR LIST
+
+              <form id="form2" class="mainpageSearch" action="/" method="post">
+                <div class="form-group">
+                  <label for="exampleSelect1">Select Doctor</label>
+                  <select class="form-control" id="exampleSelect1">
+                    <option disable>--SELECT--</option>
+                    <% @doctors.each do |doctor| %>
+                      <option><%=doctor.name%></option>
+                      <%end%>
+                  </select>
+                </div>
+                  <button type="submit" class="btn btn-warning">Submit</button>
+              </form>
+
+
             </div>
           </div>
         </div>
