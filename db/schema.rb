@@ -65,3 +65,5 @@ ActiveRecord::Schema.define(version: 20161005110222) do
   add_foreign_key "appointments", "time_tables"
   add_foreign_key "doctors", "specialties"
 end
+
+
