@@ -84,15 +84,15 @@ class AppointmentsController < ApplicationController
       params.require(:appointment).permit(:patient_id, :doctor_id, :appointment_date_id, :time_table_id)
     end
 
-    def requested_doctor
-      params.require(:appointment).permit(:doctor_id)
-    end
-
-    def requested_date
-      params.require(:appointment).appointment_date_id
-    end
-
-    def requested_timing
-      params.require(:appointment).time_table_id
-    end
+    # def requested_doctor
+    #   params.require(:appointment).permit(:doctor_id)
+    # end
+    #
+    # def requested_date
+    #   params.require(:appointment).appointment_date_id
+    # end
+    #
+    # def requested_timing
+    #   params.require(:appointment).time_table_id
+    # end
 end
