@@ -7,6 +7,7 @@ class AppointmentsController < ApplicationController
   def index
     @appointments = Appointment.all
     @patient_appointments = Appointment.where(patient_id: current_patient.id)
+    @specialties = Specialty.all
   end
 
   # GET /appointments/1
