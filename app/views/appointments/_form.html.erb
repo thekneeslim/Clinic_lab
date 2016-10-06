@@ -1,3 +1,11 @@
+
+<span><strong>Specialty</strong></span>
+<select id="select_1">
+  <% Specialty.all.each do |specialty| %>
+    <option value='<%= specialty.id %>'><%= specialty.specialty %></option>
+  <% end %>
+</select>
+
 <%= form_for(appointment) do |f| %>
   <% if appointment.errors.any? %>
     <div id="error_explanation">
@@ -26,9 +34,7 @@
     <%end%>
   <% end %>
 
-
-
-  <div class="field">
+  <div class="field"  id="select_2">
     <%= f.label :doctor %>
     <%= f.select :doctor_id, Doctor.all.collect {|x| [x.name, x.id]}%>
   </div>

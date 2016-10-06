@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function() {
+  $('#select_2').hide();
+  $('#select_1').change(function(){
+   $('#select_2').show();
+ });
+});
