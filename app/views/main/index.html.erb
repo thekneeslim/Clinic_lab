@@ -1,1 +1,66 @@
-<h1>MAIN#INDEX</h1>
+<div class="container">
+  <h1>MAIN#INDEX</h1>
+</div>
+
+<div class="container">
+  <div class="col-md-3">
+    <div class="panel panel-warning mainPannels">
+      <div class="panel-heading">Search By</div>
+      <div class="panel-body">
+
+        <!-- ACCORDION -->
+        <div id="accordion" role="tablist" aria-multiselectable="true">
+          <!-- SEARCH BY SPECIALTY-->
+          <div class="panel panel-warning">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Specialty
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <!-- SPECIALTY LIST -->
+
+              <form class="" action="index.html" method="post">
+                <div class="form-group">
+                  <label for="exampleSelect1">Example select</label>
+                  <select class="form-control" id="exampleSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- SEARCH BY DOCTOR-->
+          <div class="panel panel-warning">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Doctor
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              DOCTOR LIST
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8 col-md-offset-1">
+    <div class="panel panel-warning mainPannels">
+      <div class="panel-heading">Appointments</div>
+      <div class="panel-body">
+      </div>
+    </div>
+  </div>
+</div>

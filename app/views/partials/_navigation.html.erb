@@ -1,35 +1,35 @@
-<nav class="navbar navbar-light bg-faded">
+<nav class="navbar navbar-dark bg-inverse">
     <a class="navbar-brand" href="/">ACME Clinic</a>
      <ul class="nav navbar-nav">
-      
-     
+
+
     <% if @current_patient%>
       <% if @current_patient.admin%>
       <li class="nav-item">
           <a class="nav-link" href="/specialties">Specialties</a>
       </li>
-      
+
       <li class="nav-item">
           <a class="nav-link" href="/doctors">Doctors</a>
       </li>
-      
+
       <li class="nav-item">
           <a class="nav-link" href="/patients">Patients</a>
       </li>
-      
+
       <li class="nav-item">
           <a class="nav-link" href="/appointment_dates">Date</a>
       </li>
-      
+
       <li class="nav-item">
           <a class="nav-link" href="/time_tables">Time</a>
       </li>
       <%end%>
-      
+
       <li class="nav-item">
           <%= link_to 'Appointment', appointments_url, class: 'nav-link', method: :get%>
       </li>
-      
+
       <li class="nav-item">
       <%= link_to 'Logout', logout_url, class: 'nav-link', method: :delete, data: {confirm: 'Are you sure?'}%>
       </li>
@@ -37,16 +37,14 @@
       <li class="nav-item">
           <a class="nav-link" href="/login">Login</a>
       </li>
-      
+
       <li class="nav-item">
           <a class="nav-link" href="/patients/new">Sign Up</a>
       </li>
     <%end%>
-    
-      
-          
+
+
+
     </ul>
-    
+
 </nav>
-        
-        
