@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark bg-inverse">
+<nav class="navbar navbar-light" style="background-color: #ffb77c;">
     <a class="navbar-brand" href="/">ACME Clinic</a>
      <ul class="nav navbar-nav">
 
@@ -33,7 +33,9 @@
       <li class="nav-item">
       <%= link_to 'Logout', logout_url, class: 'nav-link', method: :delete, data: {confirm: 'Are you sure?'}%>
       </li>
+      </ul>
     <% else %>
+     <ul class="nav navbar-nav pull-xs-right">
       <li class="nav-item">
           <a class="nav-link" href="/login">Login</a>
       </li>
@@ -41,10 +43,8 @@
       <li class="nav-item">
           <a class="nav-link" href="/patients/new">Sign Up</a>
       </li>
+      
+     </ul>    
     <%end%>
-
-
-
-    </ul>
 
 </nav>
