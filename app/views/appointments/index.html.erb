@@ -2,6 +2,18 @@
 
 <h1>Appointments</h1>
 
+<div class="">
+  <p>
+    Our hospital specialises in:
+  </p>
+  <ul>
+    <% Specialty.all.each do |specialty| %>
+      <li> <%= specialty.specialty %> </li>
+    <% end %>
+  </ul>
+</div>
+
+
 <table>
   <thead>
     <tr>
