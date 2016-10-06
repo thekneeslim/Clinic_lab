@@ -18,7 +18,8 @@
 
   <div class="field">
     <%= f.label :specialty %>
-    <%= f.text_field :specialty %>
+    <%= f.select :specialty_id, Specialty.all.collect {|x| [x.specialty, x.id]}%>
+
   </div>
 
   <div class="actions">

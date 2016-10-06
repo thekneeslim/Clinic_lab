@@ -12,12 +12,12 @@
 
 <p>
   <strong>Date:</strong>
-  <%= @appointment.date_id %>
+  <%= @appointment.appointment_date.date %>
 </p>
 
 <p>
   <strong>Time:</strong>
-  <%= @appointment.time_id %>
+  <%= @appointment.time_table.time_table %>
 </p>
 
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |
